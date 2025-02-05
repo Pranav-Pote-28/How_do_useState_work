@@ -31,3 +31,28 @@ const [count,setCount]=useState(4) -> default value inside the useState give to 
   state functon
 ==========================================================
 
+why do we use usestate ?
+
+The useState hook in React makes values dynamic by allowing you to create a piece of state in a functional component, 
+which can change over time and trigger a re-render of the component when it does.
+
+Here's what happens in more detail:
+State Initialization:
+When you call useState(initialValue), React creates a piece of state in the component and initializes 
+it with initialValue. This state will persist between renders.
+
+State Variable:
+useState returns an array with two elements:
+
+The current value of the state (e.g., count in your case).
+A function to update the state (e.g., setCount).
+The state value can be read, but to update it, you must use the updater function (setCount in this case).
+
+State Update and Re-render:
+When you call the state-updating function (e.g., setCount), React marks the component as "dirty" 
+and schedules a re-render. When React re-renders the component, the updated state value will be used.
+
+Preserving State Between Renders:
+The state is preserved across re-renders. Without useState, 
+functional components would lose all their data after each render.
+ But useState keeps the value intact, allowing it to persist and change as needed.
