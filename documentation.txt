@@ -1,0 +1,33 @@
+in git bash
+
+npx create-react-app usestate-tutorial
+
+generates all necessary files
+
+
+usestate hook:
+
+can be used only inside a function component.
+
+they an be inside a loop,or conditional statements or will give compile errors.
+
+
+const [count,setCount]=useState(4) -> default value inside the useState give to count
+
+
+========================================================
+  function decrementCount(){
+    setCount((prevCount)=>{
+      return prevCount-=1;
+    });
+  }
+
+
+  here in setX functions if we call in another function to execute 
+  inside it always has 
+  by defualt the previous value of state in it 
+  we can access and change it by passing it as an parameter 
+  "prevX"prevCount as parameter will access the previous value stored in the
+  state functon
+==========================================================
+
